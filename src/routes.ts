@@ -1,9 +1,12 @@
 import { Request, Response, Router } from "express";
 
+import { CreateUserController } from "./controllers/User/CreateUserController";
+import { AuthUserController } from "./controllers/User/AuthUserController";
+
 const router = Router();
 
-router.get("/teste", (req: Request, res: Response) => {
-	return res.json({ ok: true });
-});
+// Routes for User
+router.post("/users", new CreateUserController().handle);
+router.post("/session", new AuthUserController().handle);
 
 export { router };
