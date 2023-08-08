@@ -11,15 +11,13 @@ class CreateProductController {
 		if (!req.file) {
 			throw new Error("File is missing");
 		} else {
-			const { originalname, filename } = req.file;
-
-			console.log(filename);
+			const { originalname, filename: banner } = req.file;
 
 			const product = await createProductService.execute({
 				name,
 				price,
 				description,
-				banner: "",
+				banner,
 				category_id
 			});
 

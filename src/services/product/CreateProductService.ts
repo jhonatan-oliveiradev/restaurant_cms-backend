@@ -16,7 +16,17 @@ class CreateProductService {
 		banner,
 		category_id
 	}: ProductRequest) {
-		return { ok: true };
+		const product = await prismaClient.product.create({
+			data: {
+				name,
+				price,
+				description,
+				banner,
+				category_id
+			}
+		});
+
+		return product;
 	}
 }
 
