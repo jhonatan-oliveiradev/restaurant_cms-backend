@@ -1,10 +1,11 @@
 import { Request, Response, Router } from "express";
 
+import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
+import { ListCategoryController } from "./controllers/category/ListCategoryController";
 import { AuthUserController } from "./controllers/User/AuthUserController";
 import { CreateUserController } from "./controllers/User/CreateUserController";
 import { DetailUserController } from "./controllers/User/DetailUserController";
 import { isAuthenticated } from "./middlewares/isAuthenticated";
-import { CreateCategoryController } from "./controllers/category/CreateCategoryController";
 
 const router = Router();
 
@@ -19,5 +20,6 @@ router.post(
 	isAuthenticated,
 	new CreateCategoryController().handle
 );
+router.get("/category", isAuthenticated, new ListCategoryController().handle);
 
 export { router };
