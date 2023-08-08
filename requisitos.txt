@@ -1,0 +1,14 @@
+# Requisitos para o Backend
+
+[x] - Cadastrar um novo usuário;
+[x] - Logar um usuário;
+[x] - Verificar autenticação para rotas privadas;
+[x] - Mostrar detalhes do usuário logado;
+[x] - Criar e listar categorias;
+[x] - Criar produtos e listar produtos de uma categoria específica;
+[x] - Abrir uma mesa (order) e poder fechar ela;
+[x] - Adicionar itens à uma mesa e também poder remover os itens;
+[x] - Enviar (order) e retirar de rascunho;
+[x] - Listar todos os pedidos que não estão em rascunho (draft);
+[x] - Poder acessar todos detalhes de uma mesa com pedidos dela;
+[x] - Concluir pedido.
